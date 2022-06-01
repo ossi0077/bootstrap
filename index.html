@@ -1,108 +1,117 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-    <title>index page</title>
-    <meta charset="utf-8">
-    
-    <!-- css 파일 링크 -->
-    <link id="indexstyle" rel="stylesheet" href="index_style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hurricane&display=swap" rel="stylesheet">
-    <!-- 무료 구글폰트에서 위 세줄을 따온거고 13행으로 적용시켰음 -->
-
-    <!-- Global site tag (gtag.js) - Google Analytics(analytics.google.com) 해당 사이트에서 코드 따온거임.
-    홈에서 웹누른다음에 코드 따옴-->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PY9ZZELLSQ"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-PY9ZZELLSQ');
-    </script>
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sereno Fan page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="shortcut icon" href="https://yt3.ggpht.com/MOIqA5xUeGYhd8-fH70m_ZYAGtozHBP1daZa-XW5Dud4AzumFyBeAx6E9rm13EzQd4UxOpXD=s88-c-k-c0x00ffffff-no-nd-rj">
+    <style>
+      img{
+        margin-bottom: 50px;
+      }
+      #youtubeicon:hover{
+        fill: rgb(234, 112, 112);
+      }
+      @font-face {
+        font-family: 'KyoboHandwriting2020A';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+      }
+    </style>
 </head>
-
-<!-- body 안에 스타일을 쓰고 따옴표 안에 css 속성 문법이 들어갈 수 있다! -->
-<!-- <body style="background-color: red;"></body> -->
-<!-- 콘솔에서 자바 스크립트 상 background-color를 하고 싶으면 -대신 c를 대문자 C로 한다. -->
 <body>
-    <!-- 다크모드 낮모드 함수를 js파일로 따로 연결 -->
-    <script type="text/javascript" src="index_darkmode.js"></script>
+  <!-- home part -->
+  <div class="container" id="home">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom fixed-top bg-light">
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+        <span class="fs-4" style="font-family: 'KyoboHandwriting2020A';">작곡가 Sereno fan page</span>
+      </a>
 
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="#home" class="nav-link" aria-current="page">Home</a></li>
+        <li class="nav-item"><a href="#features" class="nav-link">Features</a></li>
+        <li class="nav-item"><a href="#album" class="nav-link">album</a></li>
+        <li class="nav-item"><a href="#recommend" class="nav-link">추천하는 곡</a></li>
+      </ul>
+    </header>
+  </div>
 
-    <!-- 태그안에 코드를 짜면 인라인 방식 아래 주석 확인-->
-    <!-- <h1 style="border-bottom: 10px solid black;"></h1> -->
-        <h1 id="maintitle_h1"><a href="/" id="maintitle">AI school - Oh seong sik</a></h1>
-
-    <!-- <input type="button" value="다크모드!" onclick="document.querySelector('body').style.color='white', document.querySelector('body').style.backgroundColor = 'black'">
-    <input type="button" value="원래대로!" onclick="document.querySelector('body').style.color='black', document.querySelector('body').style.backgroundColor = 'white'"> -->
-    <!-- 토글 버튼 만드는 코드 #container 위까지. dark_mode(), day_mode()함수로 body의 최상단에 따로 빼놓았음.-->
-    <input class="btn btn-dark" id="darkbutton" type="button" value="dark_mode" onclick="
-    // this는 이벤트를 발생시킨 태그를 지칭한다!
-    let button_value=this.value;
-    if(button_value==='dark_mode'){
-        dark_mode();
-        this.value='day_mode';
-        }
-    else{
-        day_mode();
-        this.value='dark_mode';
-        }
-    ">
-    <br><br>
-    <div id="container">
-        <div id="leftbar">
-            <div id="lefttitle"><strong>index</strong></div>
-            <ol>
-            <li><a href="1.html">html</a></li>
-            <li><a href="2.html">css</a></li>
-            <li><a href="3.html">javascript</a></li>
-            </ol>
-        </div>
-        <div id="item">
-            <h2>Hello</h2>
-            <div id="introduce">
-                Welcome! This is OSS's WEB.<br>
-                <a href="https://github.com/ossi0077">Here</a> is my github address.<br>
-                This page is my history of studying the html.<br>
-                Please comment here! <br>
-                Thank you! <br>
-                <br>
-                개발일지를 velog로 남기고 있습니다. <a href="https://velog.io/@ossi0077">여기</a>로 들어가시면 확인할 수 있습니다.<br>
-                이 사이트는 여러 기능들을 테스트 해보는 사이트입니다.
-                
-                
-
-                <br><br><br><br><br>
-                This page was updated on 2022/03/25
-            </div>
-        </div>
+  <div class="px-4 py-5 my-5 text-center">
+    <img class="d-block mx-auto mb-4 img-fluid" src="https://w.namu.la/s/eee38f1d8b309c8432db85626fe42e0b71bdde5e817cf7b5beb610c05cfb8822743c919a9484f991add99f803674f3f2fe072c70c3077b0c5a8a96f23077236b3566833ed13cad6bd140434de8a25969e3363e0cd3d5c8d71089d9dd4bd25d435c9f0e6a5fd4a91441f3209cb3ce36be" alt="" width="500" height="500">
+    <h1 class="display-5 fw-bold" style="font-family: 'KyoboHandwriting2020A';">Sereno</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">
+        "모두를 위한 음악을 하진 않습니다. 오히려, 단 한사람을 위한 음악을 할때가 많아요.
+      </p>
+      <p class="lead mb-4">하지만, 그 한사람이 당신이었으면 좋겠습니다." (by Sereno)</p>
     </div>
-    <div id="disqus_thread"></div>
-    
-<script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://double-ss-first-page.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+
+<!-- feature part -->
+  <div id="features" class="px-4 py-5 my-5 text-center text-bg-dark">
+    <h1 class="display-5 fw-bold">Features</h1>
+    <div class="col-lg-6 mx-auto">
+        <br>
+        <p class="lead mb-4">피아노를 중심으로 곡을 쓰는 작곡가.</p>
+        <p class="lead mb-4">전체적으로 동화적이고 몽환적인 느낌을 풍기며, 곡의 선율 또한 난해하지 않아 가볍게 들을 수 있다.</p>
+        <p class="lead mb-4">곡의 특성상 연주곡의 느낌을 많이 띄고 있어 피아노로 연주하는 사람이 많다.</p>
+        <p class="lead mb-4">정규 1집을 제외한 모든 곡 일러스트 제작, 곡에 맞는 시를 설명란에 직접 지어 넣는 것이 특징.</p>
+        <p class="lead mb-4">정규 앨범은 5집까지 발매되어 있으며, 모두 크라우드 펀딩으로 제작되었다.</p>
+    </div>
+  </div>
+
+  <!-- Album part -->
+<div id="album" class="container">
+  <h1 class="display-5 fw-bold text-center my-5">Album</h1>
+  
+  <div class="row">
+    <div class="col">
+      <img id="album1" src="https://w.namu.la/s/a2ce8f5770447f160c6ba35d6ee6c814f4f2565aa0b6fd9451530746cc6517e6d6837e1d714b81aca7406c71ddafa057541b8126764ef713786e88db1c9ec202537b4881d0cc6b58d37df796b7540c9e4d42398850448444ea765f9549e4be30332a449a9ee078521b39f9f5ee49b549" class="img-fluid" alt="...">
+    </div>
+    <div class="col">
+      <img id="album2" src="https://w.namu.la/s/e3c2154173f098d3131a45bed293cf53d4a3404397b6ae86ef30135618db1707c778cbd7a57396dc4f724a3de393a451e40923d171d8a48068409f9ebd7829286ff54f7104b79da92603f2ec8e67b0f174411a13e5f869965f40f137c82322c227429c9773493db597688affba2155dd" class="img-fluid" alt="...">
+    </div>
+    <div class="col">
+      <img id="album3" src="https://w.namu.la/s/8837cb13785ebc504cfc7f2574711fad23f798a21ebce59e6bd8ee67057d8cd4015ed56f6a5c7be3e9be49564ef44fd2cc93b392e86b3b6e21913304075872b2d9141de24b49f4336e87c4b3f2565c54f2ec1aac19f86b007b23f36085fc11d7e2dba49b44c7c1c9919e5de3740bb32d" class="img-fluid" alt="...">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <img id="album4" src="https://w.namu.la/s/27c8bd61e12273d350d2708a1985bcd6068324efd09c7d4ee6300a956d26e40a96a764ebe3c608baa7d33e4cdd1478ee40eeff315af2a8425f21ebf91b8eca2576bab9c3d07013253b913701644d8c85b4b98481109cda63da75defacb8d5692d37c0c4a543d96643c2a0a97fbda510f" class="img-fluid" alt="...">
+    </div>
+    <div class="col">
+      <img id="album5" src="https://w.namu.la/s/86ed86f369594887655e9cdf5938a48886c3e3dfca217e964c05a9b55a69781ee0aee4e7ccd6e47e2438b2f66baecc8efab333aa5ac8841dbd267f93350b8b66c1b89bbcb09b48aacb43488596bcc3e42a1bfc2bf6d9cd04ff8c3bfceda5aaba4828a2d8158a3cd2aaaed7ea0f78ff97" class="img-fluid" alt="...">
+    </div>
+    <div class="col">
+      <p>총 5개의 정규 앨범과 싱글앨범들이 있다. 각 곡들은 작곡가의 Youtube 채널에서 확인 가능하다.</p>
+      <a href="https://www.youtube.com/c/Sereno"><svg id="youtubeicon" xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="red" class="bi bi-youtube" viewBox="0 0 16 16">
+        <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+      </svg></a>
+    </div>
+  </div>
+</div>
+
+<!-- recommend part -->
+<div id="recommend" class="px-4 py-5 my-5 text-center text-bg-dark">
+  <h1 class="display-5 fw-bold" style="margin-bottom: 100px; margin-top: 50px;">Recommend songs</h1>
+  <div class="row">
+    <div class="col">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/75tBY-gOcoQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="col">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/edtPURcdT30" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="col">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/xNoJb2iqUWc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>
