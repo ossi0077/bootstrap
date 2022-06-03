@@ -20,40 +20,52 @@
         font-weight: normal;
         font-style: normal;
       }
+      iframe {
+        position: absolute;
+        width:100%;
+        height:100%;
+      }
     </style>
 </head>
+
 <body>
-  <!-- home part -->
-  <div class="container" id="home">
-    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom fixed-top bg-light">
-      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+  <!-- nav -->
+  <div id="topanchor" class="py-3"></div>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">
         <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
-        <span class="fs-4" style="font-family: 'KyoboHandwriting2020A';">작곡가 Sereno fan page</span>
+        <span class="fs-4" style="font-family: 'KyoboHandwriting2020A';">Sereno fan page</span>
       </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="nav navbar-nav navbar-right me-auto mb-2 mb-md-0">
+          <li class="nav-item"><a href="#topanchor" class="nav-link" aria-current="page">Home</a></li>
+          <li class="nav-item"><a href="#features" class="nav-link">Features</a></li>
+          <li class="nav-item"><a href="#album" class="nav-link">album</a></li>
+          <li class="nav-item"><a href="#recommend" class="nav-link">추천하는 곡</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-      <ul class="nav nav-pills">
-        <li class="nav-item"><a href="#home" class="nav-link" aria-current="page">Home</a></li>
-        <li class="nav-item"><a href="#features" class="nav-link">Features</a></li>
-        <li class="nav-item"><a href="#album" class="nav-link">album</a></li>
-        <li class="nav-item"><a href="#recommend" class="nav-link">추천하는 곡</a></li>
-      </ul>
-    </header>
-  </div>
-
-  <div class="px-4 py-5 my-5 text-center" style="font-family: 'KyoboHandwriting2020A';">
+  <!-- home part -->
+  <div id="home" class="px-4 py-5 my-5 text-center" style="font-family: 'KyoboHandwriting2020A';">
     <img class="d-block mx-auto mb-4 img-fluid" src="https://w.namu.la/s/eee38f1d8b309c8432db85626fe42e0b71bdde5e817cf7b5beb610c05cfb8822743c919a9484f991add99f803674f3f2fe072c70c3077b0c5a8a96f23077236b3566833ed13cad6bd140434de8a25969e3363e0cd3d5c8d71089d9dd4bd25d435c9f0e6a5fd4a91441f3209cb3ce36be" alt="" width="500" height="500">
     <h1 class="display-5 fw-bold">Sereno</h1>
     <div class="col-lg-6 mx-auto">
       <p class="lead mb-4">
         "모두를 위한 음악을 하진 않습니다. 오히려, 단 한사람을 위한 음악을 할때가 많아요.
       </p>
-      <p class="lead mb-4">하지만, 그 한사람이 당신이었으면 좋겠습니다." (by Sereno)</p>
+      <p class="lead mb-4">하지만, 그 한사람이 당신이었으면 좋겠습니다."</p>
     </div>
   </div>
 
 <!-- feature part -->
-  <div id="features" class="px-4 py-5 my-5 text-center text-bg-dark">
-    <h1 class="display-5 fw-bold">Features</h1>
+  <div id="features" class="px-4 py-5 text-center text-bg-dark">
+    <h1 class="display-5 fw-bold pt-5">Features</h1>
     <div class="col-lg-6 mx-auto">
         <br>
         <p class="lead mb-4">피아노를 중심으로 곡을 쓰는 작곡가.</p>
@@ -65,8 +77,8 @@
   </div>
 
   <!-- Album part -->
-<div id="album" class="container">
-  <h1 class="display-5 fw-bold text-center my-5">Album</h1>
+<div id="album" class="container py-3">
+  <h1 class="display-5 fw-bold text-center py-5">Album</h1>
   
   <div class="row">
     <div class="col">
@@ -97,18 +109,28 @@
 </div>
 
 <!-- recommend part -->
-<div id="recommend" class="px-4 py-5 my-5 text-center text-bg-dark">
-  <h1 class="display-5 fw-bold" style="margin-bottom: 100px; margin-top: 50px;">Recommend songs</h1>
-  <div class="row">
-    <div class="col">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/75tBY-gOcoQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    <div class="col">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/edtPURcdT30" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    <div class="col">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/xNoJb2iqUWc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
+<div class="bg-dark">
+  <div id="recommend" class="container">
+    <h1 class="display-5 fw-bold px-4 py-5 my-5 text-center text-bg-dark" style="margin-bottom: 100px; margin-top: 50px;">Recommend songs</h1>
+      <div class="pb-5">
+        <div class="row">
+          <div class="col">
+            <div style="position: relative; height: 0px; padding-bottom: 56.25%; text-align: left;">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/xNoJb2iqUWc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="col">
+            <div style="position: relative; height: 0px; padding-bottom: 56.25%; text-align: left;">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/75tBY-gOcoQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="col">
+            <div style="position: relative; height: 0px; padding-bottom: 56.25%; text-align: left;">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/edtPURcdT30" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
   </div>
 </div>
 
